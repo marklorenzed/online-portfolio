@@ -1,0 +1,89 @@
+/* .fade-enter {
+  opacity: 0;
+  display: true;
+}
+.fade-enter-active,
+.fade-enter-done {
+  opacity: 1;
+  transition: opacity 700ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  display: true;
+}
+.fade-exit-active,
+.fade-exit-done {
+  opacity: 0;
+  transition: opacity 700ms;
+}
+.fade-exit-done {
+  display: none;
+} */
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-enter-done {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active,
+.fade-exit-done {
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+.fade-exit-done {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav {
+  -webkit-animation: fadein 300ms; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 300ms; /* Firefox < 16 */
+  -ms-animation: fadein 300ms; /* Internet Explorer */
+  -o-animation: fadein 300ms; /* Opera < 12.1 */
+  animation: fadeIn 300ms;
+}
+
+body {
+  /* overflow: hidden; */
+}
+
+.main {
+  position: absolute;
+  padding-top: 100px;
+
+  -webkit-animation: fadein 300ms; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 300ms; /* Firefox < 16 */
+  -ms-animation: fadein 300ms; /* Internet Explorer */
+  -o-animation: fadein 300ms; /* Opera < 12.1 */
+  animation: fadeIn 300ms;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.bg-img {
+  /* Center and scale the image nicely */
+  background-image: url("/img/2.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center right; */
+}
