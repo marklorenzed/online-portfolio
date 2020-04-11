@@ -21,6 +21,34 @@
   display: none;
 } */
 
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&family=Lato:wght@400;700;900&family=Roboto:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+@font-face {
+  font-family: "glacialIndifference";
+  src: url("/fonts/glacial-indifference.regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "glacialIndifference";
+  src: url("/fonts/glacial-indifference.bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Heavy.otf") format("opentype");
+  font-weight: 900;
+}
+
 .fade-enter {
   opacity: 0;
 }
@@ -38,6 +66,27 @@
   transition: opacity 150ms linear;
 }
 .fade-exit-done {
+  display: none;
+}
+
+.shrinkright-enter {
+  width: 0;
+}
+.shrinkright-enter-active,
+.shrinkright-enter-done {
+  width: 100vw;
+  transition: opacity 300ms linear 150ms;
+}
+.shrinkright-exit {
+  width: 100vw;
+}
+.shrinkright-exit-active,
+.shrinkright-exit-done {
+  width: 100vw;
+  transition: width 150ms linear;
+}
+.shrinkright-exit-done {
+  width: 0;
   display: none;
 }
 
@@ -60,6 +109,7 @@
 
 body {
   /* overflow: hidden; */
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .main {
@@ -86,4 +136,31 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   /* background-position: center right; */
+}
+
+.header {
+  display: flex;
+  height: 100%;
+  color: #fff;
+}
+.header h1 {
+  font-weight: 900;
+  font-family: "Gilroy", sans-serif;
+}
+.header h2 {
+  font-family: "Gilroy", sans-serif;
+  color: #4e6b8d;
+}
+
+.nav-button {
+  min-width: 200px;
+  font-family: "Raleway", sans-serif;
+  transition: all 250ms ease;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+}
+button.nav-button:hover {
+  border: 1px solid white;
+  background-color: #eee;
+  color: black;
 }
